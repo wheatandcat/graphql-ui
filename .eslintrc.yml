@@ -1,0 +1,56 @@
+env:
+  es6: true
+  node: true
+  jasmine: true
+extends:
+  - airbnb
+  - standard
+  - standard-react
+parser: babel-eslint
+plugins:
+  - flowtype
+parserOptions:
+  ecmaFeatures:
+    experimentalObjectRestSpread: true
+    jsx: true
+  sourceType: module
+rules:
+  indent:
+    - error
+    - 2
+  quotes:
+    - error
+    - double
+  semi:
+    - error
+    - never
+  react/require-default-props: "off"
+  react/jsx-filename-extension:
+    - error
+    -
+      extensions:
+        - ".js"
+  jsx-a11y/href-no-hash: "off"
+  jsx-a11y/anchor-is-valid:
+    - warn
+  no-underscore-dangle:
+    - error
+    -
+      allow:
+        - __get__
+        - __Rewire__
+  import/no-extraneous-dependencies:
+    - error
+    -
+      devDependencies:
+        - "**/*.test.js"
+        - "**/stories.js"
+        - ".storybook/**"
+        - "jest-setup.js"
+      optionalDependencies: false
+      peerDependencies: false
+  flowtype/no-weak-types:
+    - error
+  flowtype/require-valid-file-annotation:
+    - error
+    - always

@@ -1,0 +1,7 @@
+parser: flow
+trailingComma: es5
+semi: false
+overrides:
+  - files: "*.json"
+    options:
+      trailingComma: none
