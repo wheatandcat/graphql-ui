@@ -28,8 +28,8 @@ type Props = {
 }
 
 const Card = styled(MuiCard)`
-  background-color: #e9f1fa !important;
-  border: 0.1rem solid #56a6fe !important;
+  background-color: #e7f4ee !important;
+  border: 0.1rem solid #40c585 !important;
   width: 100% !important;
 `
 
@@ -39,7 +39,7 @@ const ParamType = styled.span`color: red;`
 const QueryType = styled.span`
   padding: 0.3rem 1.5rem;
   border-radius: 0.5rem;
-  background-color: #61affe;
+  background-color: #40c585;
   color: #fff;
   font-weight: 600;
   word-break: break-all;

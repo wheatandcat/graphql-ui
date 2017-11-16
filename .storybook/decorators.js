@@ -8,8 +8,7 @@ export const center = story => (
     style={{
       display: "flex",
       alignItems: "center",
-      justifyContent: "center",
-      height: "30rem"
+      justifyContent: "center"
     }}
   >
     {story()}
