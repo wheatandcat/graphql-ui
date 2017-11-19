@@ -2,7 +2,6 @@
 import React from "react"
 import styled from "styled-components"
 import { CardContent as MuiCardContent } from "material-ui/Card"
-import Typography from "material-ui/Typography"
 import MuiPaper from "material-ui/Paper"
 import Table, { TableBody, TableCell, TableHead, TableRow } from "material-ui/Table"
 
@@ -31,7 +30,7 @@ const SubTitle = styled(MuiPaper)`
   background-color: #fff;
 `
 
-const Fields = styled(Typography)`
+const Fields = styled.div`
   padding: 0.8rem 1.6rem !important;
   font-size: 1.2rem !important;
 `

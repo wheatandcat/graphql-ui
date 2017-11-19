@@ -2,9 +2,8 @@
 import React from "react"
 import styled from "styled-components"
 import MuiCard, { CardContent as MuiCardContent, CardActions } from "material-ui/Card"
-import Collapse from "material-ui/transitions/Collapse"
+import MuiCollapse from "material-ui/transitions/Collapse"
 import MuiButton from "material-ui/Button"
-import Typography from "material-ui/Typography"
 import Divider from "material-ui/Divider"
 import { Fields, Example } from "./"
 
@@ -18,17 +17,17 @@ type Field = {
   type: Type
 }
 
-type Props = {
+export type Props = {
   open?: boolean,
-  name: string,
-  queryType: string,
   description: string,
+  name: string,
   args: Array<Field>,
   fields: Array<Field>
 }
 
 const Card = styled(MuiCard)`
   background-color: #e9f1fa !important;
+  border-radius: 0.5rem !important;
   border: 0.1rem solid #56a6fe !important;
   width: 100% !important;
 `
@@ -43,7 +42,7 @@ const QueryType = styled.span`
   color: #fff;
   font-weight: 600;
   word-break: break-all;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
 `
 
@@ -59,16 +58,20 @@ const SchemeButton = styled(MuiButton)`
 
 const CardContent = styled(MuiCardContent)`padding: 0rem !important;`
 
-const Description = styled(Typography)`
-  padding: 0.8rem 1.6rem !important;
-  font-size: 1.2rem !important;
+const Description = styled.span`
+  color: #343947;
+  font-weight: 1 !important;
+  padding: 0rem 1.5rem !important;
+  font-size: 1.4rem !important;
 `
 
-export default ({ description, name, queryType, open, args, fields }: Props) => (
+const Collapse = styled(MuiCollapse)`display: none;`
+
+export default ({ description, name, args, fields, open }: Props) => (
   <Card>
     <CardActions disableActionSpacing className='head'>
       <SchemeButton>
-        <QueryType>{queryType}</QueryType>
+        <QueryType>QUERYTYPE</QueryType>
         &nbsp;&nbsp;{name}&nbsp;
         {args.length === 0 ? "" : "("}
         {args.map((item, index) => (
@@ -78,13 +81,12 @@ export default ({ description, name, queryType, open, args, fields }: Props) => 
           </span>
         ))}
         {args.length === 0 ? "" : ")"}
+        <Description>{description}</Description>
       </SchemeButton>
     </CardActions>
-    <Collapse in={open} transitionDuration='auto' unmountOnExit className='row'>
+    <Collapse in transitionDuration='auto' unmountOnExit className='row'>
       <Divider />
-      <CardContent>
-        <Description>{description}</Description>
-      </CardContent>
+      <CardContent />
       <Fields description='Arguments' fields={args} />
       <Fields description='Fields' fields={fields} />
       <Example name={name} args={args} fields={fields} />

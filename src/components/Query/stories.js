@@ -11,7 +11,6 @@ storiesOf("Query", module)
   .add("Query", () => (
     <Query
       open={boolean("open", true)}
-      queryType='QUERYTYPE'
       name='contribution'
       description='find contribution'
       args={[
@@ -86,7 +85,6 @@ storiesOf("Query", module)
   .add("MutationType", () => (
     <MutationType
       open={boolean("open", true)}
-      queryType='MutationType'
       name='contribution'
       description='find contribution'
       args={[

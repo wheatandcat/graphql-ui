@@ -42,18 +42,6 @@ const Board = styled.div`
   border-radius: 0.5rem;
 `
 
-const Table = styled.table`
-  text-align: left;
-  width: 100%;
-  border: none;
-  border-collapse: collapse;
-  border-spacing: 0;
-  text-transform: none !important;
-  font-weight: 600 !important;
-  word-break: break-all !important;
-  font-size: 1.2rem !important;
-`
-
 const ExampleValue = (typeName: string) => {
   switch (typeName) {
   case "Int":
@@ -70,28 +58,24 @@ export default ({ name, args, fields }: Props) => (
     <SubTitle elevation={1}>Example</SubTitle>
     <Full>
       <Board>
-        <Table>
-          <tbody>
-            <div>{"{"} </div>
-            <div>
-              &nbsp;&nbsp;&nbsp;&nbsp;{name}&nbsp;
-              {args.length === 0 ? "" : "("}
-              {args.map((item, index) => (
-                <span key={item.name}>
-                  {index > 0 ? ", " : ""}
-                  {item.name}:&nbsp;{ExampleValue(item.type.name)}
-                </span>
-              ))}
-              {args.length === 0 ? "" : ")"}
-              &nbsp;&nbsp;<span>{"{"} </span>
-            </div>
-            {fields.map((item, index) => (
-              <div key={item.name}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{item.name}</div>
-            ))}
-            <div>&nbsp;&nbsp;&nbsp;&nbsp;{"}"} </div>
-            <div>{"}"} </div>
-          </tbody>
-        </Table>
+        <div>{"{"} </div>
+        <div>
+          &nbsp;&nbsp;&nbsp;&nbsp;{name}&nbsp;
+          {args.length === 0 ? "" : "("}
+          {args.map((item, index) => (
+            <span key={item.name}>
+              {index > 0 ? ", " : ""}
+              {item.name}:&nbsp;{ExampleValue(item.type.name)}
+            </span>
+          ))}
+          {args.length === 0 ? "" : ")"}
+          &nbsp;&nbsp;<span>{"{"} </span>
+        </div>
+        {fields.map((item, index) => (
+          <div key={item.name}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{item.name}</div>
+        ))}
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;{"}"} </div>
+        <div>{"}"} </div>
       </Board>
     </Full>
   </CardContent>
