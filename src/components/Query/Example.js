@@ -17,14 +17,15 @@ type Field = {
 type Props = {
   name: string,
   args: Array<Field>,
-  fields: Array<Field>
+  fields: Array<Field>,
+  mutation?: boolean
 }
 
 const CardContent = styled(MuiCardContent)`padding: 0rem !important;`
 
 const SubTitle = styled(MuiPaper)`
   padding: 1rem 1.6rem !important;
-  font-size: 1.2rem !important;
+  font-size: 0.8rem !important;
   font-weight: 600 !important;
   word-break: break-all !important;
   background-color: #fff;
@@ -40,6 +41,7 @@ const Board = styled.div`
   padding: 1.5rem 2.5rem;
   background-color: #000;
   border-radius: 0.5rem;
+  font-size: 0.8rem !important;
 `
 
 const ExampleValue = (typeName: string) => {
@@ -53,12 +55,12 @@ const ExampleValue = (typeName: string) => {
   }
 }
 
-export default ({ name, args, fields }: Props) => (
+export default ({ name, args, fields, mutation }: Props) => (
   <CardContent>
     <SubTitle elevation={1}>Example</SubTitle>
     <Full>
       <Board>
-        <div>{"{"} </div>
+        <div>{mutation ? "mutation _ {" : "{"} </div>
         <div>
           &nbsp;&nbsp;&nbsp;&nbsp;{name}&nbsp;
           {args.length === 0 ? "" : "("}

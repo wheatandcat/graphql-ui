@@ -4,25 +4,39 @@ import styled from "styled-components"
 import AppBar from "material-ui/AppBar"
 import Toolbar from "material-ui/Toolbar"
 import Typography from "material-ui/Typography"
+import Divider from "material-ui/Divider"
 import type { Props as QueryProps } from "../Query/Query"
 import type { Props as MutationProps } from "../Query/MutationType"
 import { Query, MutationType } from "../Query"
 import Footer from "../Footer"
 
 type Props = {
+  endpoint: string,
   queries: Array<QueryProps>,
   mutations: Array<MutationProps>
 }
 
 const Frame = styled.div`
-  padding: 2rem;
+  padding: 2rem 1rem;
   background-color: #f9f9f9;
-  border: 0.1rem solid #e0e0e0;
 `
 
 const Space = styled.div`padding-bottom: 1rem;`
 
-export default ({ queries, mutations }: Props) => (
+const Endpoint = styled.div`
+  width: 50%;
+  padding 2.5rem 1rem;
+  font-weight: 600;
+
+  > span {
+    padding-left: 0.5rem;
+    color: red;
+    font-weight: 1;
+  }
+
+`
+
+export default ({ endpoint, queries, mutations }: Props) => (
   <div>
     <AppBar position='static' color='accent'>
       <Toolbar>
@@ -31,12 +45,16 @@ export default ({ queries, mutations }: Props) => (
         </Typography>
       </Toolbar>
     </AppBar>
+    <Endpoint>
+      GraphQL Endpoint<span>{endpoint}</span>
+      <Divider />
+    </Endpoint>
+    <Divider />
     <Frame>
       <div>
         {queries.map(({ name, description, args, type, ofType }) => (
-          <Space>
+          <Space key={name}>
             <Query
-              key={name}
               name={name}
               description={description}
               args={args || []}
@@ -47,9 +65,8 @@ export default ({ queries, mutations }: Props) => (
       </div>
       <div>
         {mutations.map(({ name, description, args, type }) => (
-          <Space>
+          <Space key={name}>
             <MutationType
-              key={name}
               name={name}
               description={description}
               args={args || []}
@@ -59,6 +76,7 @@ export default ({ queries, mutations }: Props) => (
         ))}
       </div>
     </Frame>
+    <Divider />
     <Footer />
   </div>
 )

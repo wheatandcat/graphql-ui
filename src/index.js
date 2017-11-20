@@ -1,23 +1,28 @@
 #!/usr/bin/env node
 // @flow
+/* eslint-disable import/no-unresolved,import/extensions */
 import "babel-polyfill"
-import React from "react"
 import program from "commander"
-import { renderToStaticMarkup } from "react-dom/server"
+import { writeFileSync } from "fs"
+import rimraf from "rimraf"
+import mkdirp from "mkdirp"
 import { ApolloClient } from "apollo-client"
 import fetch from "node-fetch"
 import { HttpLink } from "apollo-link-http"
 import { InMemoryCache } from "apollo-cache-inmemory"
 import gql from "graphql-tag"
-import Header from "./components/Header"
+import { execSync } from "child_process"
 
 program
   .usage("[options] <url>")
   .version("0.1.0")
   .parse(process.argv)
 
+const outputDir = process.argv[3] || "graphql-ui-reports"
+const endpoint = process.argv[2] || "http://localhost:8080/graphql"
+
 const client = new ApolloClient({
-  link: new HttpLink({ uri: "http://localhost:8080/graphql", fetch }),
+  link: new HttpLink({ uri: endpoint, fetch }),
   cache: new InMemoryCache()
 })
 
@@ -54,6 +59,7 @@ const output = async () => {
               }
               args {
                 name
+                description
                 type {
                   name
                 }
@@ -88,6 +94,7 @@ const output = async () => {
               }
               args {
                 name
+                description
                 type {
                   name
                 }
@@ -98,22 +105,18 @@ const output = async () => {
       }
     `
   })
-  await console.log(response.data)
 
-  const reportFileContent =
-    (await "<!DOCTYPE html>\n") +
-    renderToStaticMarkup(
-      <Header>
-        <div>aaa</div>
-      </Header>
-    )
+  await writeFileSync(`${outputDir}/response.json`, JSON.stringify(response), { encoding: "utf8" })
+  await writeFileSync(`${outputDir}/info.json`, JSON.stringify({ endpoint }), { encoding: "utf8" })
 
-  console.log(reportFileContent)
+  await execSync("npm run webpack")
 }
 
 const start = async () => {
-  console.log("start")
-  output()
+  await rimraf.sync(outputDir)
+  await mkdirp.sync(outputDir)
+
+  await output()
 }
 
 start(program)

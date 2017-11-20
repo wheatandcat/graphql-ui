@@ -8,6 +8,7 @@ storiesOf("Page", module)
   .addDecorator(withKnobs)
   .add("Page", () => (
     <Page
+      endpoint='http://localhost:8080/graphql'
       queries={[
         {
           args: [

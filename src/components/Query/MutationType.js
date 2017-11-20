@@ -1,7 +1,10 @@
 // @flow
 import React from "react"
 import styled from "styled-components"
-import MuiCard, { CardContent as MuiCardContent, CardActions } from "material-ui/Card"
+import MuiCard, {
+  CardContent as MuiCardContent,
+  CardActions as MuiCardActions
+} from "material-ui/Card"
 import MuiCollapse from "material-ui/transitions/Collapse"
 import MuiButton from "material-ui/Button"
 import Divider from "material-ui/Divider"
@@ -35,13 +38,13 @@ const ParamName = styled.span`color: #808080;`
 const ParamType = styled.span`color: red;`
 
 const QueryType = styled.span`
-  padding: 0.3rem 1.5rem;
+  padding: 0.3rem 1rem;
   border-radius: 0.5rem;
   background-color: #40c585;
   color: #fff;
   font-weight: 600;
   word-break: break-all;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
 `
 
@@ -52,7 +55,7 @@ const SchemeButton = styled(MuiButton)`
   text-transform: none !important;
   font-weight: 600 !important;
   word-break: break-all !important;
-  font-size: 1.6rem !important;
+  font-size: 1rem !important;
 `
 
 const CardContent = styled(MuiCardContent)`padding: 0rem !important;`
@@ -61,7 +64,12 @@ const Description = styled.span`
   color: #343947;
   font-weight: 1 !important;
   padding: 0rem 1.5rem !important;
-  font-size: 1.4rem !important;
+  font-size: 1rem !important;
+`
+
+const CardActions = styled(MuiCardActions)`
+  padding: 0rem !important;
+  height: 3rem !important;
 `
 
 const Collapse = styled(MuiCollapse)`display: none;`
@@ -88,7 +96,7 @@ export default ({ description, name, args, fields }: Props) => (
       <CardContent />
       <Fields description='Arguments' fields={args} />
       <Fields description='Fields' fields={fields} />
-      <Example name={name} args={args} fields={fields} />
+      <Example name={name} args={args} fields={fields} mutation />
     </Collapse>
   </Card>
 )
