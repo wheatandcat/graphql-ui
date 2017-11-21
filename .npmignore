@@ -4,3 +4,6 @@ example/
 doc/
 graphql-ui-reports/
 jest-setup.js
+.prettierrc
+.eslintrc.yml
+.eslintignore

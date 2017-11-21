@@ -1,24 +1,736 @@
 <!DOCTYPE html>
-<html lang="en">
+<style>.MuiPaper-root-8 {
+  background-color: #fff;
+}
+.MuiPaper-rounded-9 {
+  border-radius: 2px;
+}
+.MuiPaper-shadow0-10 {
+  box-shadow: none;
+}
+.MuiPaper-shadow1-11 {
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+.MuiPaper-shadow2-12 {
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+}
+.MuiPaper-shadow3-13 {
+  box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.2),0px 3px 4px 0px rgba(0, 0, 0, 0.14),0px 3px 3px -2px rgba(0, 0, 0, 0.12);
+}
+.MuiPaper-shadow4-14 {
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),0px 4px 5px 0px rgba(0, 0, 0, 0.14),0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+.MuiPaper-shadow5-15 {
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 5px 8px 0px rgba(0, 0, 0, 0.14),0px 1px 14px 0px rgba(0, 0, 0, 0.12);
+}
+.MuiPaper-shadow6-16 {
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+}
+.MuiPaper-shadow7-17 {
+  box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2),0px 7px 10px 1px rgba(0, 0, 0, 0.14),0px 2px 16px 1px rgba(0, 0, 0, 0.12);
+}
+.MuiPaper-shadow8-18 {
+  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2),0px 8px 10px 1px rgba(0, 0, 0, 0.14),0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+.MuiPaper-shadow9-19 {
+  box-shadow: 0px 5px 6px -3px rgba(0, 0, 0, 0.2),0px 9px 12px 1px rgba(0, 0, 0, 0.14),0px 3px 16px 2px rgba(0, 0, 0, 0.12);
+}
+.MuiPaper-shadow10-20 {
+  box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.2),0px 10px 14px 1px rgba(0, 0, 0, 0.14),0px 4px 18px 3px rgba(0, 0, 0, 0.12);
+}
+.MuiPaper-shadow11-21 {
+  box-shadow: 0px 6px 7px -4px rgba(0, 0, 0, 0.2),0px 11px 15px 1px rgba(0, 0, 0, 0.14),0px 4px 20px 3px rgba(0, 0, 0, 0.12);
+}
+.MuiPaper-shadow12-22 {
+  box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 12px 17px 2px rgba(0, 0, 0, 0.14),0px 5px 22px 4px rgba(0, 0, 0, 0.12);
+}
+.MuiPaper-shadow13-23 {
+  box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 13px 19px 2px rgba(0, 0, 0, 0.14),0px 5px 24px 4px rgba(0, 0, 0, 0.12);
+}
+.MuiPaper-shadow14-24 {
+  box-shadow: 0px 7px 9px -4px rgba(0, 0, 0, 0.2),0px 14px 21px 2px rgba(0, 0, 0, 0.14),0px 5px 26px 4px rgba(0, 0, 0, 0.12);
+}
+.MuiPaper-shadow15-25 {
+  box-shadow: 0px 8px 9px -5px rgba(0, 0, 0, 0.2),0px 15px 22px 2px rgba(0, 0, 0, 0.14),0px 6px 28px 5px rgba(0, 0, 0, 0.12);
+}
+.MuiPaper-shadow16-26 {
+  box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, 0.2),0px 16px 24px 2px rgba(0, 0, 0, 0.14),0px 6px 30px 5px rgba(0, 0, 0, 0.12);
+}
+.MuiPaper-shadow17-27 {
+  box-shadow: 0px 8px 11px -5px rgba(0, 0, 0, 0.2),0px 17px 26px 2px rgba(0, 0, 0, 0.14),0px 6px 32px 5px rgba(0, 0, 0, 0.12);
+}
+.MuiPaper-shadow18-28 {
+  box-shadow: 0px 9px 11px -5px rgba(0, 0, 0, 0.2),0px 18px 28px 2px rgba(0, 0, 0, 0.14),0px 7px 34px 6px rgba(0, 0, 0, 0.12);
+}
+.MuiPaper-shadow19-29 {
+  box-shadow: 0px 9px 12px -6px rgba(0, 0, 0, 0.2),0px 19px 29px 2px rgba(0, 0, 0, 0.14),0px 7px 36px 6px rgba(0, 0, 0, 0.12);
+}
+.MuiPaper-shadow20-30 {
+  box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 20px 31px 3px rgba(0, 0, 0, 0.14),0px 8px 38px 7px rgba(0, 0, 0, 0.12);
+}
+.MuiPaper-shadow21-31 {
+  box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 21px 33px 3px rgba(0, 0, 0, 0.14),0px 8px 40px 7px rgba(0, 0, 0, 0.12);
+}
+.MuiPaper-shadow22-32 {
+  box-shadow: 0px 10px 14px -6px rgba(0, 0, 0, 0.2),0px 22px 35px 3px rgba(0, 0, 0, 0.14),0px 8px 42px 7px rgba(0, 0, 0, 0.12);
+}
+.MuiPaper-shadow23-33 {
+  box-shadow: 0px 11px 14px -7px rgba(0, 0, 0, 0.2),0px 23px 36px 3px rgba(0, 0, 0, 0.14),0px 9px 44px 8px rgba(0, 0, 0, 0.12);
+}
+.MuiPaper-shadow24-34 {
+  box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2),0px 24px 38px 3px rgba(0, 0, 0, 0.14),0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+}
+.MuiAppBar-root-1 {
+  width: 100%;
+  display: flex;
+  z-index: 1100;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+.MuiAppBar-positionFixed-2 {
+  top: 0;
+  left: auto;
+  right: 0;
+  position: fixed;
+}
+.MuiAppBar-positionAbsolute-3 {
+  top: 0;
+  left: auto;
+  right: 0;
+  position: absolute;
+}
+.MuiAppBar-positionStatic-4 {
+  position: static;
+  flex-shrink: 0;
+}
+.MuiAppBar-colorDefault-5 {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #f5f5f5;
+}
+.MuiAppBar-colorPrimary-6 {
+  color: rgba(255, 255, 255, 1);
+  background-color: #3f51b5;
+}
+.MuiAppBar-colorAccent-7 {
+  color: rgba(255, 255, 255, 1);
+  background-color: #ff4081;
+}
+.MuiToolbar-root-35 {
+  display: flex;
+  position: relative;
+  min-height: 56px;
+  align-items: center;
+}
+@media (min-width:1px) and (orientation: landscape) {
+  .MuiToolbar-root-35 {
+    min-height: 48px;
+  }
+}
+@media (min-width:600px) {
+  .MuiToolbar-root-35 {
+    min-height: 64px;
+  }
+}
+.MuiToolbar-gutters-36 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+@media (min-width:600px) {
+  .MuiToolbar-gutters-36 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+.MuiTypography-root-37 {
+  margin: 0;
+  display: block;
+}
+.MuiTypography-display4-38 {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 7rem;
+  font-weight: 300;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.14286em;
+  margin-left: -.06em;
+  letter-spacing: -.04em;
+}
+.MuiTypography-display3-39 {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 3.5rem;
+  font-weight: 400;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.30357em;
+  margin-left: -.04em;
+  letter-spacing: -.02em;
+}
+.MuiTypography-display2-40 {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 2.8125rem;
+  font-weight: 400;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.06667em;
+  margin-left: -.04em;
+}
+.MuiTypography-display1-41 {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 2.125rem;
+  font-weight: 400;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.20588em;
+  margin-left: -.04em;
+}
+.MuiTypography-headline-42 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.35417em;
+}
+.MuiTypography-title-43 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 1.3125rem;
+  font-weight: 500;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.16667em;
+}
+.MuiTypography-subheading-44 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.5em;
+}
+.MuiTypography-body2-45 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.71429em;
+}
+.MuiTypography-body1-46 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.46429em;
+}
+.MuiTypography-caption-47 {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 0.75rem;
+  font-weight: 400;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  line-height: 1.375em;
+}
+.MuiTypography-button-48 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  text-transform: uppercase;
+}
+.MuiTypography-alignLeft-49 {
+  text-align: left;
+}
+.MuiTypography-alignCenter-50 {
+  text-align: center;
+}
+.MuiTypography-alignRight-51 {
+  text-align: right;
+}
+.MuiTypography-alignJustify-52 {
+  text-align: justify;
+}
+.MuiTypography-noWrap-53 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.MuiTypography-gutterBottom-54 {
+  margin-bottom: 0.35em;
+}
+.MuiTypography-paragraph-55 {
+  margin-bottom: 16px;
+}
+.MuiTypography-colorInherit-56 {
+  color: inherit;
+}
+.MuiTypography-colorPrimary-57 {
+  color: #3f51b5;
+}
+.MuiTypography-colorSecondary-58 {
+  color: rgba(0, 0, 0, 0.54);
+}
+.MuiTypography-colorAccent-59 {
+  color: #f50057;
+}
+.MuiTypography-colorError-60 {
+  color: #ff1744;
+}
+.MuiDivider-root-61 {
+  height: 1px;
+  margin: 0;
+  border: none;
+  flex-shrink: 0;
+}
+.MuiDivider-default-62 {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+.MuiDivider-inset-63 {
+  margin-left: 72px;
+}
+.MuiDivider-light-64 {
+  background-color: rgba(0, 0, 0, 0.075);
+}
+.MuiDivider-absolute-65 {
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+}
+.MuiCardContent-root-95 {
+  padding: 16px;
+}
+.MuiCardContent-root-95:last-child {
+  padding-bottom: 24px;
+}
+.MuiCardActions-root-66 {
+  height: 52px;
+  display: flex;
+  padding: 2px 4px;
+  align-items: center;
+}
+.MuiCardActions-actionSpacing-67 {
+  margin: 0 4px;
+}
+.MuiCollapse-container-91 {
+  height: 0;
+  overflow: hidden;
+  transition: height 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+.MuiCollapse-entered-92 {
+  height: auto;
+}
+.MuiCollapse-wrapper-93 {
+  display: flex;
+}
+.MuiCollapse-wrapperInner-94 {
+  width: 100%;
+}
+.MuiTouchRipple-root-84 {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 0;
+  position: absolute;
+  overflow: hidden;
+  border-radius: inherit;
+  pointer-events: none;
+}
+.MuiTouchRipple-wrapper-85 {
+  opacity: 1;
+}
+.MuiTouchRipple-wrapperLeaving-86 {
+  opacity: 0;
+  animation: mui-ripple-exit 550ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.MuiTouchRipple-wrapperPulsating-87 {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  animation: mui-ripple-pulsate 1500ms cubic-bezier(0.4, 0, 0.2, 1) 200ms infinite;
+}
+@keyframes mui-ripple-enter {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes mui-ripple-exit {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes mui-ripple-pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.MuiTouchRipple-ripple-88 {
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  position: absolute;
+  background: currentColor;
+  border-radius: 50%;
+}
+.MuiTouchRipple-rippleVisible-89 {
+  opacity: 0.3;
+  transform: scale(1);
+  animation: mui-ripple-enter 550ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.MuiTouchRipple-rippleFast-90 {
+  animation-duration: 200ms;
+}
+.MuiButtonBase-root-82 {
+  color: inherit;
+  border: 0;
+  cursor: pointer;
+  display: inline-flex;
+  outline: none;
+  position: relative;
+  appearance: none;
+  align-items: center;
+  user-select: none;
+  border-radius: 0;
+  justify-content: center;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.MuiButtonBase-root-82::-moz-focus-inner {
+  border-style: none;
+}
+.MuiButtonBase-disabled-83 {
+  cursor: default;
+  pointer-events: none;
+}
+.MuiButton-root-68 {
+  color: rgba(0, 0, 0, 0.87);
+  padding: 8px 16px;
+  min-width: 88px;
+  font-size: 0.875rem;
+  box-sizing: border-box;
+  min-height: 36px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  line-height: 1.4em;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  border-radius: 2px;
+  text-transform: uppercase;
+}
+.MuiButton-root-68:hover {
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.12);
+}
+@media (hover: none) {
+  .MuiButton-root-68:hover {
+    background-color: transparent;
+  }
+}
+.MuiButton-root-68:hover.MuiButton-disabled-80 {
+  background-color: transparent;
+}
+.MuiButton-dense-69 {
+  padding: 7px 8px;
+  min-width: 64px;
+  font-size: 0.8125rem;
+  min-height: 32px;
+}
+.MuiButton-label-70 {
+  width: 100%;
+  display: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+}
+.MuiButton-flatPrimary-71 {
+  color: #3f51b5;
+}
+.MuiButton-flatPrimary-71:hover {
+  background-color: rgba(63, 81, 181, 0.12);
+}
+@media (hover: none) {
+  .MuiButton-flatPrimary-71:hover {
+    background-color: transparent;
+  }
+}
+.MuiButton-flatAccent-72 {
+  color: #ff4081;
+}
+.MuiButton-flatAccent-72:hover {
+  background-color: rgba(255, 64, 129, 0.12);
+}
+@media (hover: none) {
+  .MuiButton-flatAccent-72:hover {
+    background-color: transparent;
+  }
+}
+.MuiButton-flatContrast-73 {
+  color: rgba(255, 255, 255, 1);
+}
+.MuiButton-flatContrast-73:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+@media (hover: none) {
+  .MuiButton-flatContrast-73:hover {
+    background-color: transparent;
+  }
+}
+.MuiButton-colorInherit-74 {
+  color: inherit;
+}
+.MuiButton-raised-75 {
+  color: rgba(0, 0, 0, 0.87);
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+  background-color: #e0e0e0;
+}
+.MuiButton-raised-75.MuiButton-keyboardFocused-76 {
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+}
+.MuiButton-raised-75:active {
+  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2),0px 8px 10px 1px rgba(0, 0, 0, 0.14),0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+.MuiButton-raised-75.MuiButton-disabled-80 {
+  box-shadow: none;
+  background-color: rgba(0, 0, 0, 0.12);
+}
+.MuiButton-raised-75:hover {
+  background-color: #d5d5d5;
+}
+@media (hover: none) {
+  .MuiButton-raised-75:hover {
+    background-color: #e0e0e0;
+  }
+}
+.MuiButton-raised-75:hover.MuiButton-disabled-80 {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+@media (hover: none) {
+  .MuiButton-raised-75:hover.MuiButton-disabled-80 {
+    background-color: #e0e0e0;
+  }
+}
+.MuiButton-raisedPrimary-77 {
+  color: rgba(255, 255, 255, 1);
+  background-color: #3f51b5;
+}
+.MuiButton-raisedPrimary-77:hover {
+  background-color: #303f9f;
+}
+@media (hover: none) {
+  .MuiButton-raisedPrimary-77:hover {
+    background-color: #3f51b5;
+  }
+}
+.MuiButton-raisedAccent-78 {
+  color: rgba(255, 255, 255, 1);
+  background-color: #ff4081;
+}
+.MuiButton-raisedAccent-78:hover {
+  background-color: #f50057;
+}
+@media (hover: none) {
+  .MuiButton-raisedAccent-78:hover {
+    background-color: #ff4081;
+  }
+}
+.MuiButton-raisedContrast-79 {
+  color: rgba(255, 255, 255, 1);
+}
+.MuiButton-disabled-80 {
+  color: rgba(0, 0, 0, 0.26);
+}
+.MuiButton-fab-81 {
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  min-width: 0;
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+  border-radius: 50%;
+}
+.MuiButton-fab-81:active {
+  box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 12px 17px 2px rgba(0, 0, 0, 0.14),0px 5px 22px 4px rgba(0, 0, 0, 0.12);
+}
+.MuiTable-root-96 {
+  width: 100%;
+  overflow: hidden;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.MuiTableBody-root-110 {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 0.8125rem;
+}
+.MuiTableCell-root-103 {
+  text-align: left;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.075);
+}
+.MuiTableCell-numeric-104 {
+  text-align: right;
+  flex-direction: row-reverse;
+}
+.MuiTableCell-head-105 {
+  position: relative;
+  font-weight: 500;
+}
+.MuiTableCell-paddingDefault-106 {
+  padding: 4px 56px 4px 24px;
+}
+.MuiTableCell-paddingDefault-106:last-child {
+  padding-right: 24px;
+}
+.MuiTableCell-paddingDense-107 {
+  padding-right: 24px;
+}
+.MuiTableCell-paddingCheckbox-108 {
+  padding: 0 12px;
+}
+.MuiTableCell-footer-109 {
+  border-bottom: 0;
+}
+.MuiTableHead-root-97 {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.MuiTableRow-root-98 {
+  color: inherit;
+  height: 48px;
+  display: table-row;
+  vertical-align: middle;
+}
+.MuiTableRow-root-98:focus {
+  outline: none;
+}
+.MuiTableRow-head-99 {
+  height: 56px;
+}
+.MuiTableRow-footer-100 {
+  height: 56px;
+}
+.MuiTableRow-hover-101:hover {
+  background: #eeeeee;
+}
+.MuiTableRow-selected-102 {
+  background: #f5f5f5;
+}</style><style type="text/css" data-styled-components="lcSHuv eBVTnt cRSRbh dIkNfT iSLfHs deBdXY iTdCMF hSkIFy chuRVz jSBkzv fAhRXN dLOOMN cBSfxk jLNjg igYwcd jOFNhg idqNjc ftnLmf kuNCoe zINTn kvbLbG htAPvU dtcqoj kFGVTq cMGgyy liOUNX kuwGgS wYROn" data-styled-components-is-local="true">/* sc-component-id: sc-bdVaJa */
+.sc-bdVaJa {}
 
-<head>
-    <meta charset="UTF-8">
-    <title>graphql-ui</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script>
-    $(document).ready(function() {
-      $(".head").click(function() {
-        $(this)
-          .next(".row")
-          .stop(true, true)
-          .slideToggle()
-      })
-    })
-    </script>
-</head>
+.dIkNfT{background-color:#e9f1fa !important;border-radius:0.5rem !important;border:0.1rem solid #56a6fe !important;width:100% !important;}
+/* sc-component-id: sc-bwzfXH */
+.sc-bwzfXH {}
 
-<body style="margin:0px;">
-    <div id="root"></div>
-    <script src="./bundle.js"></script>
-</body>
-</html>
+.hSkIFy{color:#808080;}
+/* sc-component-id: sc-htpNat */
+.sc-htpNat {}
+
+.chuRVz{color:red;}
+/* sc-component-id: sc-bxivhb */
+.sc-bxivhb {}
+
+.iTdCMF{padding:0.3rem 1rem;border-radius:0.5rem;background-color:#61affe;color:#fff;font-weight:600;word-break:break-all;font-size:0.8rem;text-transform:uppercase;}
+/* sc-component-id: sc-ifAKCX */
+.sc-ifAKCX {}
+
+.deBdXY{width:100%;text-align:left !important;-webkit-box-pack:start !important;-webkit-justify-content:start !important;-ms-flex-pack:start !important;justify-content:start !important;text-transform:none !important;font-weight:600 !important;word-break:break-all !important;font-size:1rem !important;}
+/* sc-component-id: sc-EHOje */
+.sc-EHOje {}
+
+.dLOOMN{padding:0rem !important;}
+/* sc-component-id: sc-bZQynM */
+.sc-bZQynM {}
+
+.jSBkzv{color:#343947;font-weight:1 !important;padding:0rem 1.5rem !important;font-size:1rem !important;}
+/* sc-component-id: sc-gzVnrw */
+.sc-gzVnrw {}
+
+.iSLfHs{padding:0rem !important;height:3rem !important;}
+/* sc-component-id: sc-htoDjs */
+.sc-htoDjs {}
+
+.fAhRXN{display:none;}
+/* sc-component-id: sc-dnqmqq */
+.sc-dnqmqq {}
+
+.zINTn{background-color:#e7f4ee !important;border-radius:0.5rem !important;border:0.1rem solid #40c585 !important;width:100% !important;}
+/* sc-component-id: sc-iwsKbI */
+.sc-iwsKbI {}
+
+.kFGVTq{color:#808080;}
+/* sc-component-id: sc-gZMcBi */
+.sc-gZMcBi {}
+
+.cMGgyy{color:red;}
+/* sc-component-id: sc-gqjmRU */
+.sc-gqjmRU {}
+
+.dtcqoj{padding:0.3rem 1rem;border-radius:0.5rem;background-color:#40c585;color:#fff;font-weight:600;word-break:break-all;font-size:0.8rem;text-transform:uppercase;}
+/* sc-component-id: sc-VigVT */
+.sc-VigVT {}
+
+.htAPvU{width:100%;text-align:left !important;-webkit-box-pack:start !important;-webkit-justify-content:start !important;-ms-flex-pack:start !important;justify-content:start !important;text-transform:none !important;font-weight:600 !important;word-break:break-all !important;font-size:1rem !important;}
+/* sc-component-id: sc-jTzLTM */
+.sc-jTzLTM {}
+
+.wYROn{padding:0rem !important;}
+/* sc-component-id: sc-fjdhpX */
+.sc-fjdhpX {}
+
+.liOUNX{color:#343947;font-weight:1 !important;padding:0rem 1.5rem !important;font-size:1rem !important;}
+/* sc-component-id: sc-jzJRlG */
+.sc-jzJRlG {}
+
+.kvbLbG{padding:0rem !important;height:3rem !important;}
+/* sc-component-id: sc-cSHVUG */
+.sc-cSHVUG {}
+
+.kuwGgS{display:none;}
+/* sc-component-id: sc-kAzzGY */
+.sc-kAzzGY {}
+
+.cBSfxk{padding:0rem !important;}
+/* sc-component-id: sc-chPdSV */
+.sc-chPdSV {}
+
+.jLNjg{padding:1rem 1.6rem !important;font-size:0.8rem !important;font-weight:600 !important;word-break:break-all !important;background-color:#fff;}
+/* sc-component-id: sc-kgoBCf */
+.sc-kgoBCf {}
+
+.igYwcd{padding:0.8rem 1.6rem !important;font-size:0.8rem !important;}
+/* sc-component-id: sc-kGXeez */
+.sc-kGXeez {}
+
+.jOFNhg{padding:0rem !important;}
+/* sc-component-id: sc-kpOJdX */
+.sc-kpOJdX {}
+
+.idqNjc{padding:1rem 1.6rem !important;font-size:0.8rem !important;font-weight:600 !important;word-break:break-all !important;background-color:#fff;}
+/* sc-component-id: sc-dxgOiQ */
+.sc-dxgOiQ {}
+
+.ftnLmf{color:#fff;width:100%;padding:0.75rem;}
+/* sc-component-id: sc-ckVGcZ */
+.sc-ckVGcZ {}
+
+.kuNCoe{padding:1.5rem 2.5rem;background-color:#000;border-radius:0.5rem;font-size:0.8rem !important;}
+/* sc-component-id: sc-jKJlTe */
+.sc-jKJlTe {}
+
+.eBVTnt{padding:2rem 1rem;background-color:#f9f9f9;}
+/* sc-component-id: sc-eNQAEJ */
+.sc-eNQAEJ {}
+
+.cRSRbh{padding-bottom:1rem;}
+/* sc-component-id: sc-hMqMXs */
+.sc-hMqMXs {}
+
+.lcSHuv{width:50%;padding:2.5rem 1rem;font-weight:600;}.lcSHuv > span{padding-left:0.5rem;color:red;font-weight:1;}
+</style><div data-reactroot=""><html lang="en"><head><title>leasot report</title><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><script src="./open.js"></script></head><body><div><div><header class="MuiPaper-root-8 MuiPaper-shadow4-14 MuiAppBar-root-1 MuiAppBar-positionStatic-4 MuiAppBar-colorAccent-7"><div class="MuiToolbar-root-35 MuiToolbar-gutters-36"><h2 class="MuiTypography-root-37 MuiTypography-title-43 MuiTypography-colorInherit-56">GraphQL-UI</h2></div></header><div class="sc-hMqMXs lcSHuv">GraphQL Endpoint<span>http://localhost:8080/graphql</span><hr class="MuiDivider-root-61 MuiDivider-default-62"/></div><hr class="MuiDivider-root-61 MuiDivider-default-62"/><div class="sc-jKJlTe eBVTnt"><div><div class="sc-eNQAEJ cRSRbh"><div class="MuiPaper-root-8 MuiPaper-shadow2-12 MuiPaper-rounded-9 sc-bdVaJa dIkNfT"><div class="MuiCardActions-root-66 head sc-gzVnrw iSLfHs"><button tabindex="0" class="MuiButtonBase-root-82 MuiButton-root-68 sc-ifAKCX deBdXY" type="button" role="button"><span class="MuiButton-label-70"><span class="sc-bxivhb iTdCMF">QUERYTYPE</span>  <!-- -->contribution<!-- --> <!-- -->(<span><span class="sc-bwzfXH hSkIFy">id</span>: <span class="sc-htpNat chuRVz">Int</span></span>)<span class="sc-bZQynM jSBkzv">find contribution</span></span><span class="MuiTouchRipple-root-84"></span></button></div><div class="MuiCollapse-container-91 MuiCollapse-entered-92 row sc-htoDjs fAhRXN"><div class="MuiCollapse-wrapper-93"><div class="MuiCollapse-wrapperInner-94"><hr class="MuiDivider-root-61 MuiDivider-default-62"/><div class="MuiCardContent-root-95 sc-EHOje dLOOMN"></div><div class="MuiCardContent-root-95 sc-kAzzGY cBSfxk"><div class="MuiPaper-root-8 MuiPaper-shadow1-11 MuiPaper-rounded-9 sc-chPdSV jLNjg">Arguments</div><div class="sc-kgoBCf igYwcd"><table class="MuiTable-root-96"><thead class="MuiTableHead-root-97"><tr class="MuiTableRow-root-98 MuiTableRow-head-99"><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105" style="width:3rem">name</th><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105" style="width:3rem">type</th><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105">description</th></tr></thead><tbody class="MuiTableBody-root-110"><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">id</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">Int</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">contribution id</td></tr></tbody></table></div></div><div class="MuiCardContent-root-95 sc-kAzzGY cBSfxk"><div class="MuiPaper-root-8 MuiPaper-shadow1-11 MuiPaper-rounded-9 sc-chPdSV jLNjg">Fields</div><div class="sc-kgoBCf igYwcd"><table class="MuiTable-root-96"><thead class="MuiTableHead-root-97"><tr class="MuiTableRow-root-98 MuiTableRow-head-99"><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105" style="width:3rem">name</th><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105" style="width:3rem">type</th><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105">description</th></tr></thead><tbody class="MuiTableBody-root-110"><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">createdAt</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">String</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">created date</td></tr><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">deletedAt</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">String</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">delete date</td></tr><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">id</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">Int</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">id</td></tr><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">title</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">String</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">title</td></tr><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">updatedAt</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">String</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">update date</td></tr><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">userId</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">Int</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">user id</td></tr><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">viewStatus</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">Int</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">view status 0 ore 1</td></tr></tbody></table></div></div><div class="MuiCardContent-root-95 sc-kGXeez jOFNhg"><div class="MuiPaper-root-8 MuiPaper-shadow1-11 MuiPaper-rounded-9 sc-kpOJdX idqNjc">Example</div><div class="sc-dxgOiQ ftnLmf"><div class="sc-ckVGcZ kuNCoe"><div>{<!-- --> </div><div>    <!-- -->contribution<!-- --> <!-- -->(<span>id<!-- -->: <!-- -->1</span>)<!-- -->  <span>{<!-- --> </span></div><div>        <!-- -->createdAt</div><div>        <!-- -->deletedAt</div><div>        <!-- -->id</div><div>        <!-- -->title</div><div>        <!-- -->updatedAt</div><div>        <!-- -->userId</div><div>        <!-- -->viewStatus</div><div>    <!-- -->}<!-- --> </div><div>}<!-- --> </div></div></div></div></div></div></div></div></div><div class="sc-eNQAEJ cRSRbh"><div class="MuiPaper-root-8 MuiPaper-shadow2-12 MuiPaper-rounded-9 sc-bdVaJa dIkNfT"><div class="MuiCardActions-root-66 head sc-gzVnrw iSLfHs"><button tabindex="0" class="MuiButtonBase-root-82 MuiButton-root-68 sc-ifAKCX deBdXY" type="button" role="button"><span class="MuiButton-label-70"><span class="sc-bxivhb iTdCMF">QUERYTYPE</span>  <!-- -->contributionList<!-- --> <!-- -->(<span><span class="sc-bwzfXH hSkIFy">first</span>: <span class="sc-htpNat chuRVz">Int</span></span>)<span class="sc-bZQynM jSBkzv">contribution list</span></span><span class="MuiTouchRipple-root-84"></span></button></div><div class="MuiCollapse-container-91 MuiCollapse-entered-92 row sc-htoDjs fAhRXN"><div class="MuiCollapse-wrapper-93"><div class="MuiCollapse-wrapperInner-94"><hr class="MuiDivider-root-61 MuiDivider-default-62"/><div class="MuiCardContent-root-95 sc-EHOje dLOOMN"></div><div class="MuiCardContent-root-95 sc-kAzzGY cBSfxk"><div class="MuiPaper-root-8 MuiPaper-shadow1-11 MuiPaper-rounded-9 sc-chPdSV jLNjg">Arguments</div><div class="sc-kgoBCf igYwcd"><table class="MuiTable-root-96"><thead class="MuiTableHead-root-97"><tr class="MuiTableRow-root-98 MuiTableRow-head-99"><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105" style="width:3rem">name</th><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105" style="width:3rem">type</th><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105">description</th></tr></thead><tbody class="MuiTableBody-root-110"><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">first</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">Int</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">number of item displayed</td></tr></tbody></table></div></div><div class="MuiCardContent-root-95 sc-kAzzGY cBSfxk"><div class="MuiPaper-root-8 MuiPaper-shadow1-11 MuiPaper-rounded-9 sc-chPdSV jLNjg">Fields</div><div class="sc-kgoBCf igYwcd"><table class="MuiTable-root-96"><thead class="MuiTableHead-root-97"><tr class="MuiTableRow-root-98 MuiTableRow-head-99"><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105" style="width:3rem">name</th><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105" style="width:3rem">type</th><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105">description</th></tr></thead><tbody class="MuiTableBody-root-110"><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">createdAt</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">String</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">created date</td></tr><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">deletedAt</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">String</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">delete date</td></tr><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">id</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">Int</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">id</td></tr><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">title</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">String</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">title</td></tr><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">updatedAt</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">String</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">update date</td></tr><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">userId</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">Int</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">user id</td></tr><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">viewStatus</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">Int</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">view status 0 ore 1</td></tr></tbody></table></div></div><div class="MuiCardContent-root-95 sc-kGXeez jOFNhg"><div class="MuiPaper-root-8 MuiPaper-shadow1-11 MuiPaper-rounded-9 sc-kpOJdX idqNjc">Example</div><div class="sc-dxgOiQ ftnLmf"><div class="sc-ckVGcZ kuNCoe"><div>{<!-- --> </div><div>    <!-- -->contributionList<!-- --> <!-- -->(<span>first<!-- -->: <!-- -->1</span>)<!-- -->  <span>{<!-- --> </span></div><div>        <!-- -->createdAt</div><div>        <!-- -->deletedAt</div><div>        <!-- -->id</div><div>        <!-- -->title</div><div>        <!-- -->updatedAt</div><div>        <!-- -->userId</div><div>        <!-- -->viewStatus</div><div>    <!-- -->}<!-- --> </div><div>}<!-- --> </div></div></div></div></div></div></div></div></div><div class="sc-eNQAEJ cRSRbh"><div class="MuiPaper-root-8 MuiPaper-shadow2-12 MuiPaper-rounded-9 sc-bdVaJa dIkNfT"><div class="MuiCardActions-root-66 head sc-gzVnrw iSLfHs"><button tabindex="0" class="MuiButtonBase-root-82 MuiButton-root-68 sc-ifAKCX deBdXY" type="button" role="button"><span class="MuiButton-label-70"><span class="sc-bxivhb iTdCMF">QUERYTYPE</span>  <!-- -->problemList<!-- --> <!-- -->(<span><span class="sc-bwzfXH hSkIFy">first</span>: <span class="sc-htpNat chuRVz">Int</span></span>)<span class="sc-bZQynM jSBkzv">proble list</span></span><span class="MuiTouchRipple-root-84"></span></button></div><div class="MuiCollapse-container-91 MuiCollapse-entered-92 row sc-htoDjs fAhRXN"><div class="MuiCollapse-wrapper-93"><div class="MuiCollapse-wrapperInner-94"><hr class="MuiDivider-root-61 MuiDivider-default-62"/><div class="MuiCardContent-root-95 sc-EHOje dLOOMN"></div><div class="MuiCardContent-root-95 sc-kAzzGY cBSfxk"><div class="MuiPaper-root-8 MuiPaper-shadow1-11 MuiPaper-rounded-9 sc-chPdSV jLNjg">Arguments</div><div class="sc-kgoBCf igYwcd"><table class="MuiTable-root-96"><thead class="MuiTableHead-root-97"><tr class="MuiTableRow-root-98 MuiTableRow-head-99"><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105" style="width:3rem">name</th><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105" style="width:3rem">type</th><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105">description</th></tr></thead><tbody class="MuiTableBody-root-110"><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">first</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">Int</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">number of item displayed</td></tr></tbody></table></div></div><div class="MuiCardContent-root-95 sc-kAzzGY cBSfxk"><div class="MuiPaper-root-8 MuiPaper-shadow1-11 MuiPaper-rounded-9 sc-chPdSV jLNjg">Fields</div><div class="sc-kgoBCf igYwcd"><table class="MuiTable-root-96"><thead class="MuiTableHead-root-97"><tr class="MuiTableRow-root-98 MuiTableRow-head-99"><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105" style="width:3rem">name</th><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105" style="width:3rem">type</th><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105">description</th></tr></thead><tbody class="MuiTableBody-root-110"><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">createdAt</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">String</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">created date</td></tr><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">deletedAt</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">String</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">delete date</td></tr><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">id</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">Int</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">id</td></tr><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">title</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">String</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">title</td></tr><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">type</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">Int</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">type</td></tr><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">updatedAt</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">String</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">update date</td></tr><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">userContributionId</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">Int</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">contribution id</td></tr><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">userId</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">Int</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">user id</td></tr></tbody></table></div></div><div class="MuiCardContent-root-95 sc-kGXeez jOFNhg"><div class="MuiPaper-root-8 MuiPaper-shadow1-11 MuiPaper-rounded-9 sc-kpOJdX idqNjc">Example</div><div class="sc-dxgOiQ ftnLmf"><div class="sc-ckVGcZ kuNCoe"><div>{<!-- --> </div><div>    <!-- -->problemList<!-- --> <!-- -->(<span>first<!-- -->: <!-- -->1</span>)<!-- -->  <span>{<!-- --> </span></div><div>        <!-- -->createdAt</div><div>        <!-- -->deletedAt</div><div>        <!-- -->id</div><div>        <!-- -->title</div><div>        <!-- -->type</div><div>        <!-- -->updatedAt</div><div>        <!-- -->userContributionId</div><div>        <!-- -->userId</div><div>    <!-- -->}<!-- --> </div><div>}<!-- --> </div></div></div></div></div></div></div></div></div><div class="sc-eNQAEJ cRSRbh"><div class="MuiPaper-root-8 MuiPaper-shadow2-12 MuiPaper-rounded-9 sc-bdVaJa dIkNfT"><div class="MuiCardActions-root-66 head sc-gzVnrw iSLfHs"><button tabindex="0" class="MuiButtonBase-root-82 MuiButton-root-68 sc-ifAKCX deBdXY" type="button" role="button"><span class="MuiButton-label-70"><span class="sc-bxivhb iTdCMF">QUERYTYPE</span>  <!-- -->questionList<!-- --> <!-- -->(<span><span class="sc-bwzfXH hSkIFy">first</span>: <span class="sc-htpNat chuRVz">Int</span></span>)<span class="sc-bZQynM jSBkzv">question list</span></span><span class="MuiTouchRipple-root-84"></span></button></div><div class="MuiCollapse-container-91 MuiCollapse-entered-92 row sc-htoDjs fAhRXN"><div class="MuiCollapse-wrapper-93"><div class="MuiCollapse-wrapperInner-94"><hr class="MuiDivider-root-61 MuiDivider-default-62"/><div class="MuiCardContent-root-95 sc-EHOje dLOOMN"></div><div class="MuiCardContent-root-95 sc-kAzzGY cBSfxk"><div class="MuiPaper-root-8 MuiPaper-shadow1-11 MuiPaper-rounded-9 sc-chPdSV jLNjg">Arguments</div><div class="sc-kgoBCf igYwcd"><table class="MuiTable-root-96"><thead class="MuiTableHead-root-97"><tr class="MuiTableRow-root-98 MuiTableRow-head-99"><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105" style="width:3rem">name</th><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105" style="width:3rem">type</th><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105">description</th></tr></thead><tbody class="MuiTableBody-root-110"><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">first</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">Int</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">number of item displayed</td></tr></tbody></table></div></div><div class="MuiCardContent-root-95 sc-kAzzGY cBSfxk"><div class="MuiPaper-root-8 MuiPaper-shadow1-11 MuiPaper-rounded-9 sc-chPdSV jLNjg">Fields</div><div class="sc-kgoBCf igYwcd"><table class="MuiTable-root-96"><thead class="MuiTableHead-root-97"><tr class="MuiTableRow-root-98 MuiTableRow-head-99"><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105" style="width:3rem">name</th><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105" style="width:3rem">type</th><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105">description</th></tr></thead><tbody class="MuiTableBody-root-110"><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">body</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">String</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">body</td></tr><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">createdAt</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">String</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">created date</td></tr><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">deletedAt</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">String</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">delete date</td></tr><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">email</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">String</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">email</td></tr><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">id</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">Int</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">id</td></tr><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">updatedAt</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">String</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">update date</td></tr><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">userId</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">Int</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">user id</td></tr></tbody></table></div></div><div class="MuiCardContent-root-95 sc-kGXeez jOFNhg"><div class="MuiPaper-root-8 MuiPaper-shadow1-11 MuiPaper-rounded-9 sc-kpOJdX idqNjc">Example</div><div class="sc-dxgOiQ ftnLmf"><div class="sc-ckVGcZ kuNCoe"><div>{<!-- --> </div><div>    <!-- -->questionList<!-- --> <!-- -->(<span>first<!-- -->: <!-- -->1</span>)<!-- -->  <span>{<!-- --> </span></div><div>        <!-- -->body</div><div>        <!-- -->createdAt</div><div>        <!-- -->deletedAt</div><div>        <!-- -->email</div><div>        <!-- -->id</div><div>        <!-- -->updatedAt</div><div>        <!-- -->userId</div><div>    <!-- -->}<!-- --> </div><div>}<!-- --> </div></div></div></div></div></div></div></div></div><div class="sc-eNQAEJ cRSRbh"><div class="MuiPaper-root-8 MuiPaper-shadow2-12 MuiPaper-rounded-9 sc-bdVaJa dIkNfT"><div class="MuiCardActions-root-66 head sc-gzVnrw iSLfHs"><button tabindex="0" class="MuiButtonBase-root-82 MuiButton-root-68 sc-ifAKCX deBdXY" type="button" role="button"><span class="MuiButton-label-70"><span class="sc-bxivhb iTdCMF">QUERYTYPE</span>  <!-- -->user<!-- --> <!-- -->(<span><span class="sc-bwzfXH hSkIFy">id</span>: <span class="sc-htpNat chuRVz">Int</span></span>)<span class="sc-bZQynM jSBkzv">find user</span></span><span class="MuiTouchRipple-root-84"></span></button></div><div class="MuiCollapse-container-91 MuiCollapse-entered-92 row sc-htoDjs fAhRXN"><div class="MuiCollapse-wrapper-93"><div class="MuiCollapse-wrapperInner-94"><hr class="MuiDivider-root-61 MuiDivider-default-62"/><div class="MuiCardContent-root-95 sc-EHOje dLOOMN"></div><div class="MuiCardContent-root-95 sc-kAzzGY cBSfxk"><div class="MuiPaper-root-8 MuiPaper-shadow1-11 MuiPaper-rounded-9 sc-chPdSV jLNjg">Arguments</div><div class="sc-kgoBCf igYwcd"><table class="MuiTable-root-96"><thead class="MuiTableHead-root-97"><tr class="MuiTableRow-root-98 MuiTableRow-head-99"><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105" style="width:3rem">name</th><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105" style="width:3rem">type</th><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105">description</th></tr></thead><tbody class="MuiTableBody-root-110"><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">id</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">Int</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">user id</td></tr></tbody></table></div></div><div class="MuiCardContent-root-95 sc-kAzzGY cBSfxk"><div class="MuiPaper-root-8 MuiPaper-shadow1-11 MuiPaper-rounded-9 sc-chPdSV jLNjg">Fields</div><div class="sc-kgoBCf igYwcd"><table class="MuiTable-root-96"><thead class="MuiTableHead-root-97"><tr class="MuiTableRow-root-98 MuiTableRow-head-99"><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105" style="width:3rem">name</th><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105" style="width:3rem">type</th><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105">description</th></tr></thead><tbody class="MuiTableBody-root-110"><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">createdAt</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">String</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">created date</td></tr><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">deletedAt</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">String</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">delete date</td></tr><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">email</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">String</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">email</td></tr><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">id</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">Int</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">id</td></tr><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">name</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">String</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">name</td></tr><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">profileImageId</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">Int</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">profile image id</td></tr><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">updatedAt</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">String</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">update date</td></tr></tbody></table></div></div><div class="MuiCardContent-root-95 sc-kGXeez jOFNhg"><div class="MuiPaper-root-8 MuiPaper-shadow1-11 MuiPaper-rounded-9 sc-kpOJdX idqNjc">Example</div><div class="sc-dxgOiQ ftnLmf"><div class="sc-ckVGcZ kuNCoe"><div>{<!-- --> </div><div>    <!-- -->user<!-- --> <!-- -->(<span>id<!-- -->: <!-- -->1</span>)<!-- -->  <span>{<!-- --> </span></div><div>        <!-- -->createdAt</div><div>        <!-- -->deletedAt</div><div>        <!-- -->email</div><div>        <!-- -->id</div><div>        <!-- -->name</div><div>        <!-- -->profileImageId</div><div>        <!-- -->updatedAt</div><div>    <!-- -->}<!-- --> </div><div>}<!-- --> </div></div></div></div></div></div></div></div></div><div class="sc-eNQAEJ cRSRbh"><div class="MuiPaper-root-8 MuiPaper-shadow2-12 MuiPaper-rounded-9 sc-bdVaJa dIkNfT"><div class="MuiCardActions-root-66 head sc-gzVnrw iSLfHs"><button tabindex="0" class="MuiButtonBase-root-82 MuiButton-root-68 sc-ifAKCX deBdXY" type="button" role="button"><span class="MuiButton-label-70"><span class="sc-bxivhb iTdCMF">QUERYTYPE</span>  <!-- -->userList<!-- --> <!-- -->(<span><span class="sc-bwzfXH hSkIFy">first</span>: <span class="sc-htpNat chuRVz">Int</span></span>)<span class="sc-bZQynM jSBkzv">user list</span></span><span class="MuiTouchRipple-root-84"></span></button></div><div class="MuiCollapse-container-91 MuiCollapse-entered-92 row sc-htoDjs fAhRXN"><div class="MuiCollapse-wrapper-93"><div class="MuiCollapse-wrapperInner-94"><hr class="MuiDivider-root-61 MuiDivider-default-62"/><div class="MuiCardContent-root-95 sc-EHOje dLOOMN"></div><div class="MuiCardContent-root-95 sc-kAzzGY cBSfxk"><div class="MuiPaper-root-8 MuiPaper-shadow1-11 MuiPaper-rounded-9 sc-chPdSV jLNjg">Arguments</div><div class="sc-kgoBCf igYwcd"><table class="MuiTable-root-96"><thead class="MuiTableHead-root-97"><tr class="MuiTableRow-root-98 MuiTableRow-head-99"><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105" style="width:3rem">name</th><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105" style="width:3rem">type</th><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105">description</th></tr></thead><tbody class="MuiTableBody-root-110"><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">first</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">Int</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">number of item displayed</td></tr></tbody></table></div></div><div class="MuiCardContent-root-95 sc-kAzzGY cBSfxk"><div class="MuiPaper-root-8 MuiPaper-shadow1-11 MuiPaper-rounded-9 sc-chPdSV jLNjg">Fields</div><div class="sc-kgoBCf igYwcd"><table class="MuiTable-root-96"><thead class="MuiTableHead-root-97"><tr class="MuiTableRow-root-98 MuiTableRow-head-99"><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105" style="width:3rem">name</th><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105" style="width:3rem">type</th><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105">description</th></tr></thead><tbody class="MuiTableBody-root-110"><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">createdAt</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">String</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">created date</td></tr><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">deletedAt</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">String</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">delete date</td></tr><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">email</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">String</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">email</td></tr><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">id</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">Int</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">id</td></tr><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">name</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">String</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">name</td></tr><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">profileImageId</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">Int</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">profile image id</td></tr><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">updatedAt</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">String</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">update date</td></tr></tbody></table></div></div><div class="MuiCardContent-root-95 sc-kGXeez jOFNhg"><div class="MuiPaper-root-8 MuiPaper-shadow1-11 MuiPaper-rounded-9 sc-kpOJdX idqNjc">Example</div><div class="sc-dxgOiQ ftnLmf"><div class="sc-ckVGcZ kuNCoe"><div>{<!-- --> </div><div>    <!-- -->userList<!-- --> <!-- -->(<span>first<!-- -->: <!-- -->1</span>)<!-- -->  <span>{<!-- --> </span></div><div>        <!-- -->createdAt</div><div>        <!-- -->deletedAt</div><div>        <!-- -->email</div><div>        <!-- -->id</div><div>        <!-- -->name</div><div>        <!-- -->profileImageId</div><div>        <!-- -->updatedAt</div><div>    <!-- -->}<!-- --> </div><div>}<!-- --> </div></div></div></div></div></div></div></div></div></div><div><div class="sc-eNQAEJ cRSRbh"><div class="MuiPaper-root-8 MuiPaper-shadow2-12 MuiPaper-rounded-9 sc-dnqmqq zINTn"><div class="MuiCardActions-root-66 head sc-jzJRlG kvbLbG"><button tabindex="0" class="MuiButtonBase-root-82 MuiButton-root-68 sc-VigVT htAPvU" type="button" role="button"><span class="MuiButton-label-70"><span class="sc-gqjmRU dtcqoj">MutationType</span>  <!-- -->hideContribution<!-- --> <!-- -->(<span><span class="sc-iwsKbI kFGVTq">id</span>: <span class="sc-gZMcBi cMGgyy">Int</span></span>)<span class="sc-fjdhpX liOUNX">Update existing todo, mark it done or not done</span></span><span class="MuiTouchRipple-root-84"></span></button></div><div class="MuiCollapse-container-91 MuiCollapse-entered-92 row sc-cSHVUG kuwGgS"><div class="MuiCollapse-wrapper-93"><div class="MuiCollapse-wrapperInner-94"><hr class="MuiDivider-root-61 MuiDivider-default-62"/><div class="MuiCardContent-root-95 sc-jTzLTM wYROn"></div><div class="MuiCardContent-root-95 sc-kAzzGY cBSfxk"><div class="MuiPaper-root-8 MuiPaper-shadow1-11 MuiPaper-rounded-9 sc-chPdSV jLNjg">Arguments</div><div class="sc-kgoBCf igYwcd"><table class="MuiTable-root-96"><thead class="MuiTableHead-root-97"><tr class="MuiTableRow-root-98 MuiTableRow-head-99"><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105" style="width:3rem">name</th><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105" style="width:3rem">type</th><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105">description</th></tr></thead><tbody class="MuiTableBody-root-110"><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">id</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">Int</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">contribution id</td></tr></tbody></table></div></div><div class="MuiCardContent-root-95 sc-kAzzGY cBSfxk"><div class="MuiPaper-root-8 MuiPaper-shadow1-11 MuiPaper-rounded-9 sc-chPdSV jLNjg">Fields</div><div class="sc-kgoBCf igYwcd"><table class="MuiTable-root-96"><thead class="MuiTableHead-root-97"><tr class="MuiTableRow-root-98 MuiTableRow-head-99"><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105" style="width:3rem">name</th><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105" style="width:3rem">type</th><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105">description</th></tr></thead><tbody class="MuiTableBody-root-110"><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">id</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">Int</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">id</td></tr></tbody></table></div></div><div class="MuiCardContent-root-95 sc-kGXeez jOFNhg"><div class="MuiPaper-root-8 MuiPaper-shadow1-11 MuiPaper-rounded-9 sc-kpOJdX idqNjc">Example</div><div class="sc-dxgOiQ ftnLmf"><div class="sc-ckVGcZ kuNCoe"><div>mutation _ {<!-- --> </div><div>    <!-- -->hideContribution<!-- --> <!-- -->(<span>id<!-- -->: <!-- -->1</span>)<!-- -->  <span>{<!-- --> </span></div><div>        <!-- -->id</div><div>    <!-- -->}<!-- --> </div><div>}<!-- --> </div></div></div></div></div></div></div></div></div><div class="sc-eNQAEJ cRSRbh"><div class="MuiPaper-root-8 MuiPaper-shadow2-12 MuiPaper-rounded-9 sc-dnqmqq zINTn"><div class="MuiCardActions-root-66 head sc-jzJRlG kvbLbG"><button tabindex="0" class="MuiButtonBase-root-82 MuiButton-root-68 sc-VigVT htAPvU" type="button" role="button"><span class="MuiButton-label-70"><span class="sc-gqjmRU dtcqoj">MutationType</span>  <!-- -->showContribution<!-- --> <!-- -->(<span><span class="sc-iwsKbI kFGVTq">id</span>: <span class="sc-gZMcBi cMGgyy">Int</span></span>)<span class="sc-fjdhpX liOUNX">Update existing todo, mark it done or not done</span></span><span class="MuiTouchRipple-root-84"></span></button></div><div class="MuiCollapse-container-91 MuiCollapse-entered-92 row sc-cSHVUG kuwGgS"><div class="MuiCollapse-wrapper-93"><div class="MuiCollapse-wrapperInner-94"><hr class="MuiDivider-root-61 MuiDivider-default-62"/><div class="MuiCardContent-root-95 sc-jTzLTM wYROn"></div><div class="MuiCardContent-root-95 sc-kAzzGY cBSfxk"><div class="MuiPaper-root-8 MuiPaper-shadow1-11 MuiPaper-rounded-9 sc-chPdSV jLNjg">Arguments</div><div class="sc-kgoBCf igYwcd"><table class="MuiTable-root-96"><thead class="MuiTableHead-root-97"><tr class="MuiTableRow-root-98 MuiTableRow-head-99"><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105" style="width:3rem">name</th><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105" style="width:3rem">type</th><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105">description</th></tr></thead><tbody class="MuiTableBody-root-110"><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">id</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">Int</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">contribution id</td></tr></tbody></table></div></div><div class="MuiCardContent-root-95 sc-kAzzGY cBSfxk"><div class="MuiPaper-root-8 MuiPaper-shadow1-11 MuiPaper-rounded-9 sc-chPdSV jLNjg">Fields</div><div class="sc-kgoBCf igYwcd"><table class="MuiTable-root-96"><thead class="MuiTableHead-root-97"><tr class="MuiTableRow-root-98 MuiTableRow-head-99"><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105" style="width:3rem">name</th><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105" style="width:3rem">type</th><th class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106 MuiTableCell-head-105">description</th></tr></thead><tbody class="MuiTableBody-root-110"><tr class="MuiTableRow-root-98"><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">id</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106" style="width:3rem">Int</td><td class="MuiTableCell-root-103 MuiTableCell-paddingDefault-106">id</td></tr></tbody></table></div></div><div class="MuiCardContent-root-95 sc-kGXeez jOFNhg"><div class="MuiPaper-root-8 MuiPaper-shadow1-11 MuiPaper-rounded-9 sc-kpOJdX idqNjc">Example</div><div class="sc-dxgOiQ ftnLmf"><div class="sc-ckVGcZ kuNCoe"><div>mutation _ {<!-- --> </div><div>    <!-- -->showContribution<!-- --> <!-- -->(<span>id<!-- -->: <!-- -->1</span>)<!-- -->  <span>{<!-- --> </span></div><div>        <!-- -->id</div><div>    <!-- -->}<!-- --> </div><div>}<!-- --> </div></div></div></div></div></div></div></div></div></div></div><hr class="MuiDivider-root-61 MuiDivider-default-62"/><div style="margin-top:30px;margin-bottom:15px;color:#212121;display:flex;justify-content:center">graphql Report generated by <a href="http://graphql.org/learn/" target="_blank" rel="noopener noreferrer">graphql</a> and <a href="https://github.com/wheatandcat/graphql-ui" target="_blank" rel="noopener noreferrer">graphql-ui</a></div></div></div></body></html></div>

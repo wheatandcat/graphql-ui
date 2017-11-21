@@ -7,14 +7,8 @@ export default ({ children }: { children: Node }) => (
     <head>
       <title>leasot report</title>
       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" />
+      <script src="./open.js" />
     </head>
-    <body
-      style={{
-        display: "flex",
-        justifyContent: "center"
-      }}
-    >
-      {children}
-    </body>
+    <body>{children}</body>
   </html>
 )
