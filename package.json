@@ -1,6 +1,6 @@
 {
   "name": "graphql-ui",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "graphql document generate command line tool",
   "bin": {
     "graphql-ui": "dist/index.js"

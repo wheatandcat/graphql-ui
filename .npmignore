@@ -3,5 +3,4 @@ src/
 example/
 doc/
 graphql-ui-reports/
-coverage/
 jest-setup.js
