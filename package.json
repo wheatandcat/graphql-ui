@@ -1,7 +1,7 @@
 {
   "name": "graphql-ui",
   "version": "0.1.0",
-  "description": "",
+  "description": "graphql document generate command line tool",
   "bin": {
     "graphql-ui": "dist/index.js"
   },
@@ -84,5 +84,18 @@
     "npm-run-all": "^4.1.1",
     "raf": "^3.3.2",
     "react-test-renderer": "^16.0.0"
-  }
+  },
+  "main": "src/index.js",
+  "directories": {
+    "doc": "doc",
+    "example": "example"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wheatandcat/graphql-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wheatandcat/graphql-ui/issues"
+  },
+  "homepage": "https://github.com/wheatandcat/graphql-ui#readme"
 }
