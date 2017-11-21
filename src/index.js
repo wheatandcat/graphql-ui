@@ -14,7 +14,7 @@ import gql from "graphql-tag"
 import { execSync } from "child_process"
 
 program
-  .usage("[options] <url>")
+  .usage("[options] <url> <output>")
   .version("0.1.0")
   .parse(process.argv)
 
