@@ -36,10 +36,22 @@ const Endpoint = styled.div`
 
 `
 
+const IconImg = styled.img`
+  width: 3rem;
+  heght: 3rem;
+  margin-right: 1rem;
+  background-color: #fff;
+  padding: 0 0.25rem;
+`
+
 export default ({ endpoint, queries, mutations }: Props) => (
   <div>
     <AppBar position='static' color='accent'>
       <Toolbar>
+        <IconImg
+          src='https://wheatandcat.github.io/graphql-ui/static/media/header.f9a3af7c.png'
+          alt='icon'
+        />
         <Typography type='title' color='inherit'>
           GraphQL-UI
         </Typography>

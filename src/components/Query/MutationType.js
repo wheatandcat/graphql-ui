@@ -84,7 +84,7 @@ export default ({ description, name, args, fields }: Props) => (
         {args.map((item, index) => (
           <span key={item.name}>
             {index > 0 ? ", " : ""}
-            <ParamName>{item.name}</ParamName>:&nbsp;<ParamType>{item.type.name}</ParamType>
+            <ParamName>{item.name}</ParamName>:&nbsp;<ParamType>{item.type.name || "any"}</ParamType>
           </span>
         ))}
         {args.length === 0 ? "" : ")"}

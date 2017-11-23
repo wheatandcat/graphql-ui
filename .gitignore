@@ -9,6 +9,7 @@
 # production
 /dist
 /graphql-ui-reports
+/storybook-static
 
 # misc
 .DS_Store

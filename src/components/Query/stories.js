@@ -187,6 +187,20 @@ storiesOf("Query", module)
           type: {
             name: "Int"
           }
+        },
+        {
+          name: "name",
+          description: "contribution name",
+          type: {
+            name: "String"
+          }
+        },
+        {
+          name: "open",
+          description: "contribution open",
+          type: {
+            name: "Boolean"
+          }
         }
       ]}
       fields={[

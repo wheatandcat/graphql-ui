@@ -38,6 +38,7 @@ const Full = styled.div`
 `
 
 const Board = styled.div`
+  cursor: pointer;
   padding: 1.5rem 2.5rem;
   background-color: #000;
   border-radius: 0.5rem;
@@ -47,11 +48,17 @@ const Board = styled.div`
 const ExampleValue = (typeName: string) => {
   switch (typeName) {
   case "Int":
-    return 1
+    return <span>1 </span>
+  case "Boolean":
+    return <span>true </span>
   case "String":
-    return "foo"
+    return (
+      <span>
+        {"\""}foo{"\""}
+      </span>
+    )
   default:
-    return 1
+    return <span>1 </span>
   }
 }
 
@@ -59,26 +66,28 @@ export default ({ name, args, fields, mutation }: Props) => (
   <CardContent>
     <SubTitle elevation={1}>Example</SubTitle>
     <Full>
-      <Board>
-        <div>{mutation ? "mutation _ {" : "{"} </div>
-        <div>
-          &nbsp;&nbsp;&nbsp;&nbsp;{name}&nbsp;
-          {args.length === 0 ? "" : "("}
-          {args.map((item, index) => (
-            <span key={item.name}>
-              {index > 0 ? ", " : ""}
-              {item.name}:&nbsp;{ExampleValue(item.type.name)}
-            </span>
+      <div title='copy' className='copyButton' data-clipboard-target={`#copy_${name}`}>
+        <Board id={`copy_${name}`}>
+          <div>{mutation ? "mutation _ {" : "{"} </div>
+          <div>
+            &nbsp;&nbsp;&nbsp;&nbsp;{name}&nbsp;
+            {args.length === 0 ? "" : "("}
+            {args.map((item, index) => (
+              <span key={item.name}>
+                {index > 0 ? ", " : ""}
+                {item.name}:&nbsp;{ExampleValue(item.type.name)}
+              </span>
+            ))}
+            {args.length === 0 ? "" : ")"}
+            &nbsp;&nbsp;<span>{"{"} </span>
+          </div>
+          {fields.map((item, index) => (
+            <div key={item.name}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{item.name}</div>
           ))}
-          {args.length === 0 ? "" : ")"}
-          &nbsp;&nbsp;<span>{"{"} </span>
-        </div>
-        {fields.map((item, index) => (
-          <div key={item.name}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{item.name}</div>
-        ))}
-        <div>&nbsp;&nbsp;&nbsp;&nbsp;{"}"} </div>
-        <div>{"}"} </div>
-      </Board>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;{"}"} </div>
+          <div>{"}"} </div>
+        </Board>
+      </div>
     </Full>
   </CardContent>
 )

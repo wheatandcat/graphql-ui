@@ -2,10 +2,12 @@
 import React from "react"
 import { storiesOf } from "@storybook/react"
 import { withKnobs } from "@storybook/addon-knobs"
+import Icon from "./header.png"
 import Page from "./"
 
 storiesOf("Page", module)
   .addDecorator(withKnobs)
+  .add("Icon", () => <img src={Icon} alt='icon' />)
   .add("Page", () => (
     <Page
       endpoint='http://localhost:8080/graphql'

@@ -134,8 +134,16 @@ const output = async () => {
               <div>
                 <Page
                   endpoint={endpoint}
-                  queries={response.data.__schema.queryType.fields || []}
-                  mutations={response.data.__schema.mutationType.fields || []}
+                  queries={
+                    response.data.__schema.queryType
+                      ? response.data.__schema.queryType.fields || []
+                      : []
+                  }
+                  mutations={
+                    response.data.__schema.mutationType
+                      ? response.data.__schema.mutationType.fields || []
+                      : []
+                  }
                 />
               </div>
             </Header>
@@ -155,7 +163,8 @@ const output = async () => {
     { encoding: "utf8" }
   )
 
-  await cpx.copySync("./static/open.js", `${outputDir}`)
+  await cpx.copySync(`${__dirname}/../static/actions.js`, `${outputDir}`)
+  await cpx.copySync(`${__dirname}/../static/favicon.ico`, `${outputDir}`)
 }
 
 const start = async () => {

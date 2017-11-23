@@ -51,7 +51,7 @@ export default ({ description, fields }: Props) => (
           {fields.map(item => (
             <TableRow key={item.name}>
               <TableCell style={{ width: "3rem" }}>{item.name}</TableCell>
-              <TableCell style={{ width: "3rem" }}>{item.type.name}</TableCell>
+              <TableCell style={{ width: "3rem" }}>{item.type.name || "any"}</TableCell>
               <TableCell>{item.description}</TableCell>
             </TableRow>
           ))}

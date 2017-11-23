@@ -1,7 +1,8 @@
 # graphql-ui
 
+![image](./doc/icon.png)
 
-graphql document generate command line tool
+graphql document simple generate command line tool
 
 ![image](./doc/001.png)
 
@@ -20,9 +21,13 @@ npm i --save-dev graphql-ui
 
 Run the output reports
 ```sh
-$ graphql-ui http://localhost:8080/graphql
+$ graphql-ui https://phoenix-react-apollo-demo.herokuapp.com/graphql
 
 $ ls graphql-ui-reports/
  bundle		index.html
-
 ```
+
+## Demos
+
+### storybook
+https://wheatandcat.github.io/graphql-ui/
