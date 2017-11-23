@@ -6,7 +6,6 @@ export default ({ children }: { children: Node }) => (
   <html lang="en">
     <head>
       <title>GraphQL-UI</title>
-      <meta charset="utf-8" />
       <link rel="shortcut icon" href="./favicon.ico" />
       <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" />
