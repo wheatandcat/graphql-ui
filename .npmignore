@@ -2,6 +2,7 @@ src/
 .storybook/
 example/
 doc/
+storybook-static/
 graphql-ui-reports/
 jest-setup.js
 .prettierrc
