@@ -1,5 +1,8 @@
 # graphql-ui
 
+
+[![npm version](https://badge.fury.io/js/graphql-ui.svg)](https://badge.fury.io/js/graphql-ui)
+
 ![image](./doc/icon.png)
 
 graphql document simple generate command line tool
