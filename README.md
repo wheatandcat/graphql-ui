@@ -32,5 +32,8 @@ index.html
 
 ## Demos
 
+### examples
+https://wheatandcat.github.io/examples-pages/graphql-ui-reports/index.html?v1
+
 ### storybook
 https://wheatandcat.github.io/graphql-ui/
