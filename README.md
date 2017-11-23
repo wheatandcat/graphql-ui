@@ -27,7 +27,7 @@ Run the output reports
 $ graphql-ui https://phoenix-react-apollo-demo.herokuapp.com/graphql
 
 $ ls graphql-ui-reports/
- bundle		index.html
+index.html
 ```
 
 ## Demos
