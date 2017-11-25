@@ -20,20 +20,17 @@ type Props = {
   fields: Array<Field>
 }
 
-const CardContent = styled(MuiCardContent)`padding: 0rem !important;`
+const CardContent = styled(MuiCardContent)`
+  padding: 0rem;
+  font-size: 0.8rem;
+`
 
 const SubTitle = styled(MuiPaper)`
-  padding: 1rem 1.6rem !important;
-  font-size: 0.8rem !important;
-  font-weight: 600 !important;
-  word-break: break-all !important;
-  background-color: #fff;
+  padding: 1rem 1.6rem;
+  font-weight: 600;
 `
 
-const Fields = styled.div`
-  padding: 0.8rem 1.6rem !important;
-  font-size: 0.8rem !important;
-`
+const Fields = styled.div`padding: 0.8rem 1.6rem;`
 
 export default ({ description, fields }: Props) => (
   <CardContent>

@@ -2,12 +2,10 @@
 import React from "react"
 import { storiesOf } from "@storybook/react"
 import { withKnobs, boolean } from "@storybook/addon-knobs"
-import { center } from "../../../.storybook/decorators"
 import { Query, MutationType, Fields, Example } from "./"
 
 storiesOf("Query", module)
   .addDecorator(withKnobs)
-  .addDecorator(center)
   .add("Query", () => (
     <Query
       open={boolean("open", true)}
